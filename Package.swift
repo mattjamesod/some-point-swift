@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SomePointSwift",
+    platforms: [.iOS("16.0"), .macOS("13.0")],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,9 +21,6 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SomePointSwift",
-            dependencies: []),
-        .testTarget(
-            name: "SomePointSwiftTests",
-            dependencies: ["SomePointSwift"]),
+            dependencies: [])
     ]
 )
