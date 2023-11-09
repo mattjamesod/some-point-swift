@@ -1,6 +1,19 @@
 import Foundation
 
+public extension DateInterval {
+    static var tomorrow: Self {
+        DateIntervalFactory().tomorrow()
+    }
+}
+
 class DateIntervalFactory {
+    func tomorrow() -> DateInterval {
+        DateInterval(
+            start: 1.day.hence.startOfDay(),
+            end: 1.day.hence.endOfDay()
+        )
+    }
+    
     func thisMorning() -> DateInterval {
         let start = SomePointSwiftSettings.morningStartHour
         let end = SomePointSwiftSettings.morningEndHour

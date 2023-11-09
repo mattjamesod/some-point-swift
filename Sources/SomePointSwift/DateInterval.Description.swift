@@ -7,8 +7,8 @@ enum SomeTime {
     case inTheComingDays(Int)
 }
 
-extension DateInterval {
-    func description(_ dateTemplate: String) -> String {
+public extension DateInterval {
+    func descriptionFromTemplate(_ dateTemplate: String) -> String {
         let formatter = DateIntervalFormatter()
         formatter.dateTemplate = dateTemplate
         
